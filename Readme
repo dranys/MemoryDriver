@@ -1,3 +1,5 @@
+#Daniel Jesús Salas Calderón - 201235831
+#Taller 8. Driver linux
 #para compilar el driver ejecute
 
 make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
