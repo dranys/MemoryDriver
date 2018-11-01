@@ -1,0 +1,7 @@
+#para compilar el driver ejecute
+
+make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+sudo mknod /dev/memory32 c 30 0 #enlaza el dispositivo
+sudo chmod 666 /dev/memory32 #cambia permisos
+echo -n Holamundo >/dev/memory32 #escribe sobre el dispositivo
+cat /dev/memory32 #despliega contenido
